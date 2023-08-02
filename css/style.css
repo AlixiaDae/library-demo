@@ -30,8 +30,9 @@ body {
 }
 
 header {
-  padding: 30px 200px 30px 200px;
-  background-color: hsl(251, 70%, 11%);
+  padding: 30px;
+  text-align: center;
+  background-color: hsl(251, 68%, 24%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -43,7 +44,7 @@ main {
   flex-direction: column;
   gap: 20px;
   position: relative;
-  background-color: hsl(251, 70%, 11%);
+  background-color: hsl(251, 68%, 24%);
 }
 main .shelf {
   display: grid;
@@ -52,10 +53,24 @@ main .shelf {
   height: 600px;
   width: 1200px;
   border-radius: 15px;
-  background-color: hsl(251, 68%, 24%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
 }
 main .shelf .card {
-  background-color: hsl(251, 54%, 42%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsla(251, 54%, 42%, 0.3);
+  padding: 20px;
+  width: 200px;
+  height: 250px;
+  border-radius: 15px;
+  color: hsl(313, 85%, 34%);
+  text-align: center;
+}
+main .shelf .card .title {
+  font-size: 20px;
+  font-weight: 700;
 }
 main #addBooksBtn {
   font-size: 20px;
@@ -145,7 +160,7 @@ button:hover {
 footer {
   padding: 20px;
   text-align: center;
-  background-color: hsl(251, 68%, 24%);
+  background-color: hsl(251, 70%, 11%);
   color: white;
   font-size: 15px;
   display: flex;

@@ -5,8 +5,9 @@ body {
 }
 
 header {
-    padding: 30px 200px 30px 200px;
-    background-color: $darkpurple;
+    padding: 30px;
+    text-align: center;
+    background-color: $mediumpurple;
     color: $white;
 }
 
@@ -18,7 +19,7 @@ main {
     flex-direction: column;
     gap: 20px;
     position: relative;
-    background-color: $darkpurple;
+    background-color: $mediumpurple;
 
     .shelf {
         display: grid;
@@ -27,10 +28,25 @@ main {
         height: 600px;
         width: 1200px;
         border-radius: 15px;
-        background-color:$mediumpurple;
+        background-color: $white;
+        padding: 20px;
 
         .card {
-            background-color: $lightpurple;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: $cardpurple;
+            padding: 20px;
+            width: 200px;
+            height: 250px;
+            border-radius: 15px;
+            color: $purple;
+            text-align: center;
+
+            .title {
+                font-size: 20px;
+                font-weight: map-get($font-weights, bold);
+            }
         }
     }
 
@@ -129,13 +145,10 @@ button {
     display: block;
 }
 
-
-
-
 footer {
     padding: 20px;
     text-align: center;
-    background-color: $mediumpurple;
+    background-color: $darkpurple;
     color: white;
     font-size: 15px;
     display: flex;

@@ -46,7 +46,7 @@ library.addBook(babel)
 // DOM Manipulator
 
 const main = document.querySelector("main")
-const screen = document.querySelector(".screen")
+const shelf = document.querySelector(".shelf")
 
 const addBookBtn = document.getElementById("addBooksBtn")
 const bookForm = document.querySelector("form")
@@ -62,6 +62,7 @@ function createCard(book) {
     card.classList.add("card")
 
     const title = document.createElement("p")
+    title.classList.add("title")
     title.textContent = book.name
 
     const author = document.createElement("p")
@@ -71,3 +72,12 @@ function createCard(book) {
 
     return card
 }
+
+function populateShelf(parentElement) {
+    for(let book of library.getBooks()) {
+        parentElement.appendChild(createCard(book))
+    }
+}
+
+
+populateShelf(shelf)
