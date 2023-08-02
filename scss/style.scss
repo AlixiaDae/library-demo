@@ -1,0 +1,119 @@
+@import './resets', './variables';
+
+body {
+    font-family: $mainfont;
+}
+
+header {
+    padding: 30px 200px 30px 200px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+
+    .screen {
+        position: absolute;
+        height: 500px;
+        width: 1000px;
+        margin-bottom: 56px;
+        display: none;
+    }
+
+    .shelf {
+        display: grid;
+        grid-template-areas: "a b c d" "e f g h";
+        height: 500px;
+        width: 1000px;
+        border: 1px solid black;
+    }
+
+    #addBooksBtn {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    form {
+        position: absolute;
+        margin-bottom: 100px;
+        display: none;
+
+        fieldset { 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            
+            legend {
+                font-weight: map-get($font-weights, bold);
+            }
+    
+            div {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+    
+                label {
+                    position: absolute;
+                    top: -10px;
+                    left: 5px;
+                    background-color: $white;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    font-size: 12px;
+                }
+                
+                input {
+                    height: 30px;
+                }
+            }
+            
+            #createBookBtn {
+                font-size: 15px;
+                padding: 9px;    
+            }
+
+            #createBookBtn:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    width: 140px;
+    color: $white;
+    background-color: $vpurple;
+    font-weight: map-get($font-weights, bold);
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: $rosepink;
+    color: $darkpurple;
+  }
+
+
+.show {
+    display: block;
+}
+
+.blur {
+    display: block;
+    background-color: red;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
