@@ -81,8 +81,9 @@ main form {
   margin-bottom: 100px;
   display: none;
   border-radius: 15px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(251, 68%, 24%);
   padding: 15px;
+  color: hsl(0, 0%, 100%);
 }
 main form fieldset {
   display: flex;
@@ -107,9 +108,9 @@ main form fieldset .name-box label,
 main form fieldset .author-box label,
 main form fieldset .pages-box label {
   position: absolute;
-  top: -10px;
+  top: -9px;
   left: 5px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(251, 68%, 24%);
   padding-left: 5px;
   padding-right: 5px;
   font-size: 12px;
@@ -129,6 +130,10 @@ main form fieldset .status-box .read,
 main form fieldset .status-box .unread {
   display: flex;
   align-items: center;
+}
+main form fieldset .status-box .read input[type=radio],
+main form fieldset .status-box .unread input[type=radio] {
+  margin-top: -1px;
 }
 main form fieldset #createBookBtn {
   font-size: 15px;
@@ -155,6 +160,7 @@ button:hover {
 
 .show {
   display: block;
+  z-index: 3;
 }
 
 footer {
@@ -162,13 +168,29 @@ footer {
   text-align: center;
   background-color: hsl(251, 70%, 11%);
   color: white;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-footer i {
-  padding: 5px;
+footer ul {
+  display: flex;
+  margin: 0;
+  gap: 1rem;
+  font-size: 1.5rem;
+  padding: 0;
+}
+footer ul li a {
+  text-decoration: none;
+  color: hsl(313, 85%, 34%);
+}
+footer ul li a:hover {
+  color: hsl(323, 85%, 79%);
+}
+
+input:invalid {
+  border: 2px solid red;
 }/*# sourceMappingURL=style.css.map */

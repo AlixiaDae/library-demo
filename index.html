@@ -21,11 +21,11 @@
                 <legend>New Book Form</legend>
                 <div class="name-box">
                     <label for="bookName">Book name</label>
-                    <input type="text" name="bookName" id="bookName">
+                    <input type="text" name="bookName" id="bookName" required />
                 </div>
                 <div class="author-box">
                     <label for="authorName">Author</label>
-                    <input type="text" name="authorName" id="authorName">
+                    <input type="text" name="authorName" id="authorName" required>
                 </div>
                 <div class="pages-box">
                     <label for="pageNumber">Number of pages</label>
@@ -48,11 +48,27 @@
         <button id="addBooksBtn">Add book</button>
     </main>
     <footer>
-        <div class="links">
-            <i class="fa-brands fa-linkedin fa-xl"></i>
-            <i class="fa-brands fa-square-github fa-xl"></i>
-            <i class="fa-solid fa-envelope fa-xl"></i>
-        </div>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/trisha-lyza-rivera-b31506273/" target="_blank">
+                    <span class="fa-brands fa-linkedin fa-xl" aria-hidden="true"></span>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/AlixiaDae" target="_blank">
+                    <span class="fa-brands fa-square-github fa-xl" aria-hidden="true"></span>
+                    <span class="sr-only">Github</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:trisha.rivera1208@gmail.com">
+                    <span class="fa-solid fa-envelope fa-xl" aria-hidden="true"></span>
+                    <span class="sr-only">Email</span>
+                </a>
+            </li>
+        </ul>
+            
         <div class="attribution">&#169; Lyza Rivera. All rights reserved.</div>
     </footer>
     <script src="./script.js"></script>
