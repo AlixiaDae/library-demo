@@ -54,6 +54,9 @@ main .shelf {
   border-radius: 15px;
   background-color: hsl(251, 68%, 24%);
 }
+main .shelf .card {
+  background-color: hsl(251, 54%, 42%);
+}
 main #addBooksBtn {
   font-size: 20px;
   padding: 12px;
@@ -62,25 +65,32 @@ main form {
   position: absolute;
   margin-bottom: 100px;
   display: none;
+  border-radius: 15px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 15px;
 }
 main form fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 15px;
+  gap: 15px;
+  padding: 25px 10px 10px 10px;
+  border: none;
 }
 main form fieldset legend {
   font-weight: 700;
 }
-main form fieldset div {
+main form fieldset .name-box,
+main form fieldset .author-box,
+main form fieldset .pages-box {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-main form fieldset div label {
+main form fieldset .name-box label,
+main form fieldset .author-box label,
+main form fieldset .pages-box label {
   position: absolute;
   top: -10px;
   left: 5px;
@@ -89,8 +99,21 @@ main form fieldset div label {
   padding-right: 5px;
   font-size: 12px;
 }
-main form fieldset div input {
+main form fieldset .name-box input,
+main form fieldset .author-box input,
+main form fieldset .pages-box input {
   height: 30px;
+}
+main form fieldset .status-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 12px;
+}
+main form fieldset .status-box .read,
+main form fieldset .status-box .unread {
+  display: flex;
+  align-items: center;
 }
 main form fieldset #createBookBtn {
   font-size: 15px;
@@ -117,11 +140,6 @@ button:hover {
 
 .show {
   display: block;
-}
-
-.blur {
-  display: block;
-  background-color: red;
 }
 
 footer {

@@ -28,6 +28,10 @@ main {
         width: 1200px;
         border-radius: 15px;
         background-color:$mediumpurple;
+
+        .card {
+            background-color: $lightpurple;
+        }
     }
 
     #addBooksBtn {
@@ -39,21 +43,26 @@ main {
         position: absolute;
         margin-bottom: 100px;
         display: none;
+        border-radius: 15px;
+        background-color: $white;
+        padding: 15px;
 
         fieldset { 
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            gap: 20px;
-            padding: 20px;
-            border-radius: 15px;
+            gap: 15px;
+            padding: 25px 10px 10px 10px;
+            border: none;
             
             legend {
                 font-weight: map-get($font-weights, bold);
             }
     
-            div {
+            .name-box,
+            .author-box,
+            .pages-box {
                 display: flex;
                 flex-direction: column;
                 position: relative;
@@ -72,6 +81,20 @@ main {
                     height: 30px;
                 }
             }
+
+
+            .status-box {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                font-size: 12px;
+
+                .read,
+                .unread {
+                    display: flex;
+                    align-items: center;
+                }
+            }
             
             #createBookBtn {
                 font-size: 15px;
@@ -84,6 +107,7 @@ main {
         }
     }
 }
+
 
 button {
     border: none;
@@ -105,10 +129,8 @@ button {
     display: block;
 }
 
-.blur {
-    display: block;
-    background-color: red;
-}
+
+
 
 footer {
     padding: 20px;
