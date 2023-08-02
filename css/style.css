@@ -31,6 +31,8 @@ body {
 
 header {
   padding: 30px 200px 30px 200px;
+  background-color: hsl(251, 70%, 11%);
+  color: hsl(0, 0%, 100%);
 }
 
 main {
@@ -39,22 +41,18 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   position: relative;
-}
-main .screen {
-  position: absolute;
-  height: 500px;
-  width: 1000px;
-  margin-bottom: 56px;
-  display: none;
+  background-color: hsl(251, 70%, 11%);
 }
 main .shelf {
   display: grid;
-  grid-template-areas: "a b c d" "e f g h";
-  height: 500px;
-  width: 1000px;
-  border: 1px solid black;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 600px;
+  width: 1200px;
+  border-radius: 15px;
+  background-color: hsl(251, 68%, 24%);
 }
 main #addBooksBtn {
   font-size: 20px;
@@ -114,7 +112,7 @@ button {
 button:hover {
   cursor: pointer;
   background-color: hsl(323, 85%, 79%);
-  color: hsl(251, 68%, 24%);
+  color: hsl(251, 70%, 11%);
 }
 
 .show {
@@ -127,6 +125,17 @@ button:hover {
 }
 
 footer {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  background-color: hsl(251, 68%, 24%);
+  color: white;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer i {
+  padding: 5px;
 }/*# sourceMappingURL=style.css.map */
